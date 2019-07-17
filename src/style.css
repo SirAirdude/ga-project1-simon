@@ -5,15 +5,15 @@ body {
     /* grid-template-rows: 100px 1fr 100px; */
     align-content: center;
     text-align: center;
-    /* background-color: brown; */
+    background-color: brown;
 }
 
-/* header {
+header {
      background-color: honeydew; 
-} */
+}
 
 main {
-    /* background-color: magenta; */
+    background-color: magenta;
     display: flex;
     flex-direction: column;
     align-content: center;
