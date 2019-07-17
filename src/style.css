@@ -1,11 +1,10 @@
 body {
     display: flex;
     flex-direction: column;
-    /* grid-template-columns: 100px 1fr 100px; */
-    /* grid-template-rows: 100px 1fr 100px; */
     align-content: center;
     text-align: center;
     background-color: brown;
+    min-width: 400px;
 }
 
 header {
@@ -20,7 +19,7 @@ main {
 }
 
 .colorButton {
-    border-radius: 
+    border-radius: 10px;
 }
 
 #blue {
@@ -32,8 +31,6 @@ main {
 #board {
     display: grid;
     margin: 30px auto;
-    /* grid-column: 2;
-    grid-row: 2; */
     grid-template-rows: 100px 100px 100px 100px;
     grid-template-columns: 100px 100px 100px 100px;
 }
