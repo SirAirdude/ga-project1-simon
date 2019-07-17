@@ -12,27 +12,39 @@ const board = document.querySelector('#board');
  class GameBoard {
      constructor () {
         this.clearBoard();
-        this.guessIndex = 0;
+        this.score = 0;
      }
 
      addRandom () {
          this.sequence.push(Math.floor(Math.random()*4))
-        //  console.log(this);
      }
 
      check(target) {
          let color = target.id;
          let button = colorList.indexOf(color);
         this.flashColor(button);
-        console.log(colorList.indexOf(target.id));
-
-        // if (target)
+         if (this.correct && this.guessIndex < this.sequence.length) {
+             if (button !== this.sequence[this.guessIndex]) {
+                this.correct = false;
+                alert(`Game Over. \nYour final score is ${this.score}`);
+                this.clearBoard();
+             }
+             else {
+                 this.guessIndex++;
+             }
+         }
+         if (this.sequence.length > 0 && this.sequence.length === this.guessIndex && this.correct){
+             this.score = this.sequence.length;
+             this.addRandom();
+             this.flashSequence();
+             this.guessIndex = 0;
+         }
     }
 
      clearBoard () {
          this.sequence = [];
-         this.score = 0;
-        //  console.log(this);
+         this.correct = true;
+         this.guessIndex = 0;
      }
 
      firstThree () {
@@ -42,15 +54,12 @@ const board = document.querySelector('#board');
                 this.addRandom();
             }
         }
-        // console.log(this);
      }
 
      flashColor(colorIndex) {
         let color = colorList[colorIndex];
-            console.log(color);
         let button = document.querySelector(`#${color}`);
         button.style.backgroundColor = color;
-        // console.log(button.style.backgroundColor);
         setTimeout(function() {
             this.resetColor(colorIndex)
         }.bind(this),500);
@@ -60,8 +69,9 @@ const board = document.querySelector('#board');
         let index = 0;
        let seq = setInterval(function() {
            if (index < this.sequence.length) {
-               this.flashColor(this.sequence[index]);
-               index++;
+                console.log(`flashing index ${index}`);
+                this.flashColor(this.sequence[index]);
+                index++;
            }
            else {
                clearInterval(seq);
@@ -73,7 +83,6 @@ const board = document.querySelector('#board');
         let color = colorList[colorIndex];
         let button = document.querySelector(`#${color}`);
         button.style.backgroundColor = "black";
-        // console.log('reset');
      }
  }
 
@@ -88,7 +97,6 @@ const board = document.querySelector('#board');
  board.addEventListener('click', function(evt) {
     if (evt.target.tagName === 'A') {
         game.check(evt.target);
-        // console.dir(evt.target);
     }
  })
 
