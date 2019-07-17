@@ -8,6 +8,8 @@ const colorList = ['red', 'green', 'blue', 'yellow'];
 const newGame = document.querySelector('#start');
 const reset = document.querySelector('#reset');
 const board = document.querySelector('#board');
+const score = document.querySelector('#score');
+
 
  class GameBoard {
      constructor () {
@@ -26,7 +28,7 @@ const board = document.querySelector('#board');
          if (this.correct && this.guessIndex < this.sequence.length) {
              if (button !== this.sequence[this.guessIndex]) {
                 this.correct = false;
-                alert(`Game Over. \nYour final score is ${this.score}`);
+                score.innerText = `Game Over. \nYour final score is ${this.score}`
                 this.clearBoard();
              }
              else {
@@ -69,7 +71,6 @@ const board = document.querySelector('#board');
         let index = 0;
        let seq = setInterval(function() {
            if (index < this.sequence.length) {
-                console.log(`flashing index ${index}`);
                 this.flashColor(this.sequence[index]);
                 index++;
            }
@@ -84,21 +85,27 @@ const board = document.querySelector('#board');
         let button = document.querySelector(`#${color}`);
         button.style.backgroundColor = "black";
      }
+
+     start() {
+        newGame.addEventListener('click', function() {
+            game.firstThree();
+            game.flashSequence();
+           });
+        reset.addEventListener('click', function(){game.clearBoard()});
+       
+        board.addEventListener('click', function(evt) {
+           if (evt.target.tagName === 'A') {
+               evt.preventDefault();
+               game.check(evt.target);
+           }
+        })
+     }
  }
 
- game = new GameBoard();
+ const game = new GameBoard();
+game.start();
 
- newGame.addEventListener('click', function() {
-     game.firstThree();
-     game.flashSequence();
-    });
- reset.addEventListener('click', function(){game.clearBoard()});
 
- board.addEventListener('click', function(evt) {
-    if (evt.target.tagName === 'A') {
-        game.check(evt.target);
-    }
- })
 
  /**
   * set a game attribute, guessIndex, to indicate what position of the sequence the player is on
