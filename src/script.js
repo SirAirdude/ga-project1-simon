@@ -19,7 +19,7 @@ const reset = document.querySelector('#reset');
                 this.addRandom();
             }
         }
-        console.log(this);
+        // console.log(this);
      }
      addRandom () {
          this.sequence.push(Math.floor(Math.random()*4))
@@ -32,13 +32,34 @@ const reset = document.querySelector('#reset');
      }
      flashColor(index) {
         let color = colorList[this.sequence[index]];
-        console.log(color);
+        let button = document.querySelector(`#${color}`);
+        button.style.backgroundColor = color;
+        console.log(button.style.backgroundColor);
+        setTimeout(function() {
+            this.resetColor(index)
+        }.bind(this),500);
+     }
+     resetColor(index) {
+        let color = colorList[this.sequence[index]];
+        let button = document.querySelector(`#${color}`);
+        button.style.backgroundColor = "black";
+        // console.log('reset');
+     }
+     flashSequence() {
+         let index = 0;
+        setInterval(function() {
+            if (index < this.sequence.length) {
+                this.flashColor(index);
+                index++;
+            }
+        }.bind(this), 550);
      }
  }
 
  game = new GameBoard();
 
-//  newGame.addEventListener('click', function() {game.firstThree()});
-//  reset.addEventListener('click', function(){game.clearBoard()});
-game.firstThree();
-game.flashColor(0);
+ newGame.addEventListener('click', function() {
+     game.firstThree();
+     game.flashSequence();
+    });
+ reset.addEventListener('click', function(){game.clearBoard()});
