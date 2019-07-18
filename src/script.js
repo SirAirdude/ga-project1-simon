@@ -130,3 +130,5 @@ function openTab(event, tabName) {
     selectTab.style.display = 'flex';
     event.target.className =+ ' active';
 }
+
+document.querySelector('#game').click();

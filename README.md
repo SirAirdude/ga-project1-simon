@@ -29,7 +29,11 @@ http-server
 
 4. Open a web browser and enter `localhost: ****` into the address bar of the browser. (replace `****` with the port number provided when you start the server)
 
-## Contributions
+## Acknowledgements
+
+Fonts: - [Courgette](https://fonts.google.com/specimen/Courgette) : Google Fonts 
+
+## Contributors
 
 - Main Repository - https://github.com/SirAirdude/ga-project1-simon
 - please submit issues [here](https://github.com/SirAirdude/ga-project1-simon/issues)
@@ -41,3 +45,4 @@ http-server
 ## Other Links 
 
 Trello - https://trello.com/b/F3GaUNiG/ga-project-1-simon
+
