@@ -1,7 +1,9 @@
-# GA-Project1-Simon
+# GA Project1 Simon
 This is a web page for playing the Simon memory game.
 
-![preview](./img/lesson-view.png)
+![preview](./img/simon-main.png)
+
+[hosted](https://sirairdude.github.io/ga-project1-simon/)
 
 ## Current Features
 
@@ -16,7 +18,7 @@ This is a web page for playing the Simon memory game.
 
 ### Installing
 
-1. Fork and clone the [project repository] (https://github.com/SirAirdude/ga-project1-simon)
+1. Fork and clone the [project repository](https://github.com/SirAirdude/ga-project1-simon)
 
 2. Change dircetory into the project.
 
