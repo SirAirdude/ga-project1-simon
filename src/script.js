@@ -1,9 +1,3 @@
-/**
- *  - create an array to store the sequence
- *  - push a new random number to the array
- *  - check that the user gets the sequence correct
- *  - construct a gameboard class
- */
 const colorList = ['red', 'green', 'blue', 'yellow'];
 const newGame = document.querySelector('#start');
 const reset = document.querySelector('#reset');
@@ -102,18 +96,6 @@ const score = document.querySelector('#score');
      }
  }
 
- const game = new GameBoard();
-game.start();
-
-
-
- /**
-  * set a game attribute, guessIndex, to indicate what position of the sequence the player is on
-  * guessIndex gets reset when addRandom is called.
-  * propegate to colorButtons
-  * each time one is clicked, check method is called.
-  */
-
 function openTab(event, tabName) {
     const tabcontent = document.querySelectorAll('.tabcontent');
     const tabLinks = document.querySelectorAll('tabLinks');
@@ -132,3 +114,5 @@ function openTab(event, tabName) {
 }
 
 document.querySelector('#game').click();
+const game = new GameBoard();
+game.start();

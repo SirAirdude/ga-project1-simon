@@ -9,13 +9,21 @@ body {
     font-family: 'Courgette', cursive;
 }
 
+button {
+    font-family: 'Courgette', cursive;
+}
+
 header {
      background-color: honeydew; 
 }
 
-/* main {
-    background-color: magenta;
-} */
+h1 {
+    font-size: 30pt;
+}
+
+li {
+    border-bottom: thin solid mediumaquamarine;
+}
 
 .colorButton {
     border: thin solid mediumaquamarine;
@@ -26,16 +34,19 @@ header {
     overflow: hidden;
     border: none;
     background-color: #F1E8B8;
+    display: flex;
+    justify-content: space-around;
 }
 
 .tab button {
     background-color: inherit;
-    float: left;
+    /* float: left; */
     border: none;
     outline: none;
     cursor: pointer;
     padding: 15px 20px;
     transition: .3s;
+    font-size: 18pt;
 }
 
 .tab button:hover {
@@ -77,6 +88,9 @@ header {
 
 #instructionsTab {
     background-color: #F1E8B8;
+    font-size: 16pt;
+    line-height: 200%;
+    padding: 0 10px;
 }
 
 #red {
@@ -86,8 +100,8 @@ header {
 }
 
 #reset {
-    height: 20px;
-    width: 50px;
+    padding: 0 10px;
+    font-size: 18pt;
     background-color: #F1E8B8;
     border: none;
     margin: 10px auto;
