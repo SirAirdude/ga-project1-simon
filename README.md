@@ -36,7 +36,7 @@ http-server
 
 ## Authors
 
-* **Kyle Clabough** - creator https://github.com/SirAirdude
+* **Kyle Clabough** - creator - https://github.com/SirAirdude
 
 ## Other Links 
 
