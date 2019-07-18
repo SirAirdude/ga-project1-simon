@@ -3,7 +3,7 @@ This is a web page for playing the Simon memory game.
 
 ![preview](./img/simon-main.png)
 
-[hosted](https://sirairdude.github.io/ga-project1-simon/)
+[hosted here](https://sirairdude.github.io/ga-project1-simon/)
 
 ## Current Features
 
