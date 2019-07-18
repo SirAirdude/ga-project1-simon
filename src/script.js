@@ -113,3 +113,20 @@ game.start();
   * propegate to colorButtons
   * each time one is clicked, check method is called.
   */
+
+function openTab(event, tabName) {
+    const tabcontent = document.querySelectorAll('.tabcontent');
+    const tabLinks = document.querySelectorAll('tabLinks');
+    const selectTab = document.querySelector(`#${tabName}`)
+
+    for (let i = 0; i< tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks.className.replace(" active", "");
+    }
+
+    selectTab.style.display = 'flex';
+    event.target.className =+ ' active';
+}

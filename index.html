@@ -7,15 +7,17 @@
         <link rel='stylesheet' href="src/style.css">
     </head>
     <body>
+        <nav class='tab'>
+                <button class = "tabLinks" id = 'game defaultOpen' onclick="openTab(event, 'gameTab')">Game</button>
+                <button class = 'tabLinks' id = 'instructions' onclick="openTab(event, 'instructionsTab')">Instructions</button>
+        </nav>
         <header>
             <h1>Simon</h1>
-            <nav>
-                <!-- <button class = "tabLinks"></button> -->
-            </nav>
-            <h2 id = 'score'>Your Score is:</h2>
+
         </header>
         <main>
-            <!-- <div class="gameTab"> -->
+            <div id="gameTab" class="tabcontent">
+                <h2 id = 'score'>Your Score is:</h2>
                 <div id = 'board'>
                     <a href="#" class="colorButton" id = "red"></a>
                     <a href="#" class="colorButton" id = "green"></a>
@@ -24,7 +26,17 @@
                     <button id="start">Play</button>
                 </div>
                 <button id = "reset">Reset</button>
-            <!-- </div> -->
+            </div>
+            <div id = "instructionsTab" class="tabcontent">
+                <h2>Instructions</h2>
+                <ol>
+                    <li>Press the Play button to begin the game.</li>
+                    <li>The buttons around the start button will flash in sequence</li>
+                    <li>Press the buttons is the same order</li>
+                    <li>If you are correct, the buttons will flash the sequence again, adding one more flash to the end of the sequence</li>
+                    <li>The game will keep going util you get the sequence wrong, where it will give you your score. </li>
+                </ol>
+            </div>
         </main>
         <script src="src/script.js"></script>
     </body>
