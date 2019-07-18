@@ -1,11 +1,12 @@
 body {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    /* align-content: center; */
     text-align: center;
     background-color: brown;
-    min-width: 400px;
+    width: 500px;
     padding: 20px 50px;
+    margin: 0 auto;
 }
 
 header {
@@ -17,18 +18,19 @@ main {
     display: flex;
     flex-direction: column;
     align-content: center;
+    /* margin: 0 auto; */
 }
 
 .colorButton {
     border: thin solid mediumaquamarine;
 }
 
+
 #blue {
     background-color: black;
     grid-row: 1/ span 2;
     grid-column: 3 / span 2;
     border-radius: 0 100% 0 0;
-
 }
 
 #board {
@@ -57,6 +59,7 @@ main {
     width: 50px;
     background-color: #F1E8B8;
     border: none;
+    margin: 10px auto;
 }
 
 #start {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>
             Simon Memory Game
@@ -9,18 +9,23 @@
     <body>
         <header>
             <h1>Simon</h1>
-            <h2 id = 'score'></h2>
+            <nav>
+                <!-- <button class = "tabLinks"></button> -->
+            </nav>
+            <h2 id = 'score'>Your Score is:</h2>
         </header>
         <main>
-            <div id = 'board'>
-                <a href="#" class="colorButton" id = "red"></a>
-                <a href="#" class="colorButton" id = "green"></a>
-                <a href="#" class="colorButton" id = "blue"></a>
-                <a href="#" class="colorButton" id = "yellow"></a>
-                <button id="start">Play</button>
-            </div>
-            <button id = "reset">Reset</button>
+            <!-- <div class="gameTab"> -->
+                <div id = 'board'>
+                    <a href="#" class="colorButton" id = "red"></a>
+                    <a href="#" class="colorButton" id = "green"></a>
+                    <a href="#" class="colorButton" id = "blue"></a>
+                    <a href="#" class="colorButton" id = "yellow"></a>
+                    <button id="start">Play</button>
+                </div>
+                <button id = "reset">Reset</button>
+            <!-- </div> -->
         </main>
+        <script src="src/script.js"></script>
     </body>
-    <script src="src/script.js"></script>
 </html>
