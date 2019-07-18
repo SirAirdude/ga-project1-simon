@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'star_jediregular';
+    src: url('./star_jedi_webfont/star-jedi_allfont.net-webfont.woff') format('woff2'),
+         url('./star_jedi_webfont/star-jedi_allfont.net-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -40,8 +49,7 @@ li {
 
 .tab button {
     background-color: inherit;
-    /* float: left; */
-    border: none;
+     border: none;
     outline: none;
     cursor: pointer;
     padding: 15px 20px;
@@ -61,6 +69,14 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#apply {
+    padding: 0 10px;
+    font-size: 18pt;
+    background-color: #F1E8B8;
+    border: none;
+    margin: 10px auto;
 }
 
 #blue {
@@ -93,6 +109,13 @@ li {
     padding: 0 10px;
 }
 
+#optionsTab {
+    background-color: #F1E8B8;
+    font-size: 16pt;
+    line-height: 200%;
+    padding: 0 10px;
+}
+
 #red {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
@@ -114,6 +137,14 @@ li {
     background-color: #F1E8B8;
     font-size: 24pt;
     border: none;
+}
+
+#standard {
+    font-family: 'Courgette', cursive;
+}
+
+#starWars {
+    font-family: 'star_jediregular', arial;
 }
 
 #yellow {

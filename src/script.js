@@ -1,8 +1,18 @@
 const colorList = ['red', 'green', 'blue', 'yellow'];
+
+const body = document.querySelector('body');
+const buttons = document.querySelectorAll('button');
+const header = document.querySelector('header');
+
+const tab = document.querySelector('.tab');
+const tabcontent = document.querySelectorAll('.tabcontent');
+
+const apply = document.querySelector('#apply');
+const board = document.querySelector('#board');
 const newGame = document.querySelector('#start');
 const reset = document.querySelector('#reset');
-const board = document.querySelector('#board');
 const score = document.querySelector('#score');
+
 
 
  class GameBoard {
@@ -97,7 +107,6 @@ const score = document.querySelector('#score');
  }
 
 function openTab(event, tabName) {
-    const tabcontent = document.querySelectorAll('.tabcontent');
     const tabLinks = document.querySelectorAll('tabLinks');
     const selectTab = document.querySelector(`#${tabName}`)
 
@@ -116,3 +125,46 @@ function openTab(event, tabName) {
 document.querySelector('#game').click();
 const game = new GameBoard();
 game.start();
+
+class Theme {
+    constructor(font, background, fontColor, boardBackground, buttonColor, headerColor) {
+       this.font = font;
+       this.background = background;
+       this.fontColor = fontColor;
+       this.boardBackground = boardBackground;
+       this.buttonColor = buttonColor;
+       this.headerColor = headerColor;
+    }
+    apply () {
+        body.style.fontFamily = this.font;
+        body.style.color = this.fontColor;
+        for (let i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.fontFamily = this.font;
+            tabcontent[i].style.color = this.fontColor;
+        }
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].style.fontFamily = this.font;
+            buttons[i].style.color = this.fontColor;
+            buttons[i].style.backgroundColor = this.buttonColor;
+        }
+        body.style.backgroundImage = `url(${this.background})`;
+        tabcontent[0].style.backgroundColor = this.boardBackground;
+        tabcontent[1].style.backgroundColor = this.buttonColor;
+        tabcontent[2].style.backgroundColor = this.buttonColor;
+        tab.style.backgroundColor = this.buttonColor;
+        header.style.backgroundColor = this.headerColor;
+    }
+}
+
+starWars = new Theme ('star_jediregular','../img/star-field.jpg','#F0D83A','#1F4183', 'red', '#000000');
+standard = new Theme ('Courgette','', '#000000', 'magenta', '#F1E8B8', 'honeydew');
+
+apply.addEventListener('click', function() {
+    // console.log(document.querySelector('#standardRadio'));
+    if (document.querySelector('#standardRadio').checked === true) {
+        standard.apply();
+    }
+    if (document.querySelector('#starWarsRadio').checked) {
+        starWars.apply();
+    }
+})

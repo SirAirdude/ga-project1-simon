@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Bahianita|Butcherman|Courgette|Orbitron|Russo+One&display=swap" rel="stylesheet">
+        <!-- <link href="src/star-jedi_[allfont.net].ttf" rel="stylesheet" type="text/css" /> -->
         <title>
             Simon Memory Game
         </title>
         <link rel='stylesheet' href="src/style.css">
-        <link href="http://allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Audiowide|Bahianita|Butcherman|Courgette|Orbitron|Russo+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <nav class='tab'>
-                <button class = "tabLinks" id = 'game' onclick="openTab(event, 'gameTab')">Game</button>
-                <button class = 'tabLinks' id = 'instructions' onclick="openTab(event, 'instructionsTab')">Instructions</button>
+                <button class = 'tabLinks' id = 'instructions' onclick="openTab(event, 'instructionsTab')">instructions</button>
+                <button class = "tabLinks" id = 'game' onclick="openTab(event, 'gameTab')">game</button>
+                <button class = "tabLinks" id = 'options' onclick="openTab(event, 'optionsTab')">options</button>
         </nav>
         <header>
             <h1>Simon</h1>
@@ -38,6 +39,14 @@
                     <li>If you are correct, the buttons will flash the sequence again, adding one more flash to the end of the sequence</li>
                     <li>The game will keep going util you get the sequence wrong, where it will give you your score. </li>
                 </ol>
+            </div>
+            <div id = "optionsTab" class="tabcontent">
+                <div id= themes>
+                    <h3>Themes</h3>
+                    <input type="radio" name="theme" value="standard" id = 'standardRadio'><p id='standard'>Standard</p>
+                    <input type="radio" name="theme" value="star-wars" id = 'starWarsRadio'><p id='starWars'>Star Wars</p>
+                </div>
+                <button id = 'apply'>Apply</button>
             </div>
         </main>
         <script src="src/script.js"></script>

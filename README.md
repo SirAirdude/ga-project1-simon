@@ -32,6 +32,7 @@ http-server
 ## Acknowledgements
 
 Fonts: - [Courgette](https://fonts.google.com/specimen/Courgette) : Google Fonts 
+ - Star Jedi - downloaded from [allfont.net](http://allfont.net/download/star-jedi/) - created by BobaFonts
 
 ## Contributors
 
