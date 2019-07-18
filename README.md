@@ -31,13 +31,13 @@ http-server
 
 ## Contributions
 
-- Main Repository (https://github.com/SirAirdude/ga-project1-simon)
+- Main Repository - https://github.com/SirAirdude/ga-project1-simon
 - please submit issues [here](https://github.com/SirAirdude/ga-project1-simon/issues)
 
 ## Authors
 
-* **Kyle Clabough** - creator (https://github.com/SirAirdude)
+* **Kyle Clabough** - creator https://github.com/SirAirdude
 
 ## Other Links 
 
-Trello - (https://trello.com/b/F3GaUNiG/ga-project-1-simon)
+Trello - https://trello.com/b/F3GaUNiG/ga-project-1-simon
