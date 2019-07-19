@@ -127,9 +127,9 @@ const game = new GameBoard();
 game.start();
 
 class Theme {
-    constructor(font, background, fontColor, boardBackground, buttonColor, headerColor) {
+    constructor(font, backgroundColor, fontColor, boardBackground, buttonColor, headerColor) {
        this.font = font;
-       this.background = background;
+       this.backgroundColor = backgroundColor;
        this.fontColor = fontColor;
        this.boardBackground = boardBackground;
        this.buttonColor = buttonColor;
@@ -147,7 +147,7 @@ class Theme {
             buttons[i].style.color = this.fontColor;
             buttons[i].style.backgroundColor = this.buttonColor;
         }
-        body.style.backgroundImage = `url(${this.background})`;
+        body.style.backgroundColor = this.backgroundColor;
         tabcontent[0].style.backgroundColor = this.boardBackground;
         tabcontent[1].style.backgroundColor = this.buttonColor;
         tabcontent[2].style.backgroundColor = this.buttonColor;
@@ -156,8 +156,8 @@ class Theme {
     }
 }
 
-starWars = new Theme ('star_jediregular','../img/star-field.jpg','#F0D83A','#1F4183', 'red', '#000000');
-standard = new Theme ('Courgette','', '#000000', 'magenta', '#F1E8B8', 'honeydew');
+starWars = new Theme ('star_jediregular','#021D28','#F0D83A','#1F4183', 'red', '#000000');
+standard = new Theme ('Courgette','brown', '#000000', 'magenta', '#F1E8B8', 'honeydew');
 
 apply.addEventListener('click', function() {
     // console.log(document.querySelector('#standardRadio'));

@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     text-align: center;
     background-color: brown;
+    background-blend-mode: lighten;
     width: 500px;
     padding: 20px 50px;
     margin: 0 auto;
