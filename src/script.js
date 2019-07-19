@@ -13,7 +13,7 @@ const newGame = document.querySelector('#start');
 const reset = document.querySelector('#reset');
 const score = document.querySelector('#score');
 
-
+document.querySelector('#game').click();
 
  class GameBoard {
      constructor () {
@@ -51,6 +51,7 @@ const score = document.querySelector('#score');
          this.sequence = [];
          this.correct = true;
          this.guessIndex = 0;
+         this.inGame = false;
      }
 
      firstThree () {
@@ -93,8 +94,11 @@ const score = document.querySelector('#score');
      start() {
         newGame.addEventListener('click', function() {
             game.firstThree();
-            game.flashSequence();
-           });
+                if (this.inGame === false) {
+                    game.flashSequence();
+                    this.inGame = true;
+                }
+           }.bind(this));
         reset.addEventListener('click', function(){game.clearBoard()});
        
         board.addEventListener('click', function(evt) {
@@ -122,7 +126,6 @@ function openTab(event, tabName) {
     event.target.className =+ ' active';
 }
 
-document.querySelector('#game').click();
 const game = new GameBoard();
 game.start();
 
