@@ -160,7 +160,6 @@ starWars = new Theme ('star_jediregular','#021D28','#F0D83A','#1F4183', 'red', '
 standard = new Theme ('Courgette','brown', '#000000', 'magenta', '#F1E8B8', 'honeydew');
 
 apply.addEventListener('click', function() {
-    // console.log(document.querySelector('#standardRadio'));
     if (document.querySelector('#standardRadio').checked === true) {
         standard.apply();
     }

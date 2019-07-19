@@ -1,7 +1,7 @@
 # GA Project1 Simon
 This is a web page for playing the Simon memory game.
 
-![preview](./img/simon-main.png)
+![preview](./img/simon-screen-shot.png)
 
 [hosted here](https://sirairdude.github.io/ga-project1-simon/)
 
